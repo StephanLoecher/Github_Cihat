@@ -9,4 +9,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -la
+      - run: |
+          ls -la
+          git clone https://github.com/StephanLoecher/Github_Cihat.git
+          ls -la
