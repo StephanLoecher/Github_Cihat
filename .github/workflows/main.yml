@@ -8,9 +8,11 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    environment: NAME="Stephan"
     steps:
       - name: Git clone
         run: |
           ls -la
-          git clone https://github.com/StephanLoecher/Github_Cihat.git
+          git clone ${{secrets.REPO_URL}}
+          echo ${{env.NAME}}
           ls -la
